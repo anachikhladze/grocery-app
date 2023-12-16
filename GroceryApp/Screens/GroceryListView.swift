@@ -8,22 +8,28 @@
 import SwiftUI
 
 struct GroceryListView: View {
-    @State private var items = GroceryList.groceryList
-   
+    
+    // MARK: - Properties
+    @ObservedObject var viewModel: GroceryViewModel
+    
+    // MARK: - Body
     var body: some View {
         NavigationView {
             ZStack {
+                Color.black
+                    .edgesIgnoringSafeArea(.all)
                 List {
-                    ForEach(items, id: \.self) { item in
-                        GroceryItemView(name: item.name, price: "\(item.price)$", image: item.image)
+                    ForEach(viewModel.groceryData.groceryList) { item in
+                        GroceryItemView(viewModel: viewModel, groceryItem: item)
                     }
-                    .onDelete(perform: deleteItem)
                 }
                 .listStyle(.inset)
+                .padding(.horizontal)
+                .colorScheme(.dark)
                 
                 VStack {
                     Spacer()
-                    CartView()
+                    CartView(viewModel: viewModel)
                         .frame(maxWidth: .infinity)
                         .edgesIgnoringSafeArea(.bottom)
                 }
@@ -34,16 +40,18 @@ struct GroceryListView: View {
                     Text("Groceries")
                         .font(.system(size: 18))
                         .fontWeight(.semibold)
+                        .foregroundStyle(.white)
                 }
             }
         }
     }
-    
-    private func deleteItem(at offsets: IndexSet) {
-        items.remove(atOffsets: offsets)
-    }
 }
 
-#Preview {
-    GroceryListView()
+
+// MARK: - Preview
+struct GroceryListView_Previews: PreviewProvider {
+    static var previews: some View {
+        let viewModel = GroceryViewModel()
+        GroceryListView(viewModel: viewModel)
+    }
 }

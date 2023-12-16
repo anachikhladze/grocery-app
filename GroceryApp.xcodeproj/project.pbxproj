@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1830AFC2B2DF41300CC4D7F /* QuantityButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1830AFB2B2DF41300CC4D7F /* QuantityButtonView.swift */; };
+		A1830AFE2B2E011400CC4D7F /* CartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1830AFD2B2E011400CC4D7F /* CartButtonView.swift */; };
 		A186BA562B26051400A8A40C /* GroceryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A186BA552B26051400A8A40C /* GroceryAppApp.swift */; };
 		A186BA5A2B26051500A8A40C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A186BA592B26051500A8A40C /* Assets.xcassets */; };
 		A186BA5D2B26051500A8A40C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A186BA5C2B26051500A8A40C /* Preview Assets.xcassets */; };
@@ -14,9 +16,12 @@
 		A186BA662B26100700A8A40C /* GroceryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A186BA652B26100700A8A40C /* GroceryListView.swift */; };
 		A186BA682B2619A800A8A40C /* GroceryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A186BA672B2619A800A8A40C /* GroceryModel.swift */; };
 		A186BA6A2B26248700A8A40C /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A186BA692B26248700A8A40C /* CartView.swift */; };
+		A1B29B9A2B2CF05900D87A7C /* GroceryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B29B992B2CF05900D87A7C /* GroceryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A1830AFB2B2DF41300CC4D7F /* QuantityButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityButtonView.swift; sourceTree = "<group>"; };
+		A1830AFD2B2E011400CC4D7F /* CartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButtonView.swift; sourceTree = "<group>"; };
 		A186BA522B26051400A8A40C /* GroceryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A186BA552B26051400A8A40C /* GroceryAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryAppApp.swift; sourceTree = "<group>"; };
 		A186BA592B26051500A8A40C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -25,6 +30,7 @@
 		A186BA652B26100700A8A40C /* GroceryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListView.swift; sourceTree = "<group>"; };
 		A186BA672B2619A800A8A40C /* GroceryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryModel.swift; sourceTree = "<group>"; };
 		A186BA692B26248700A8A40C /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		A1B29B992B2CF05900D87A7C /* GroceryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +44,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1830AFF2B2E06B100CC4D7F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A186BA692B26248700A8A40C /* CartView.swift */,
+				A1830AFD2B2E011400CC4D7F /* CartButtonView.swift */,
+				A1830AFB2B2DF41300CC4D7F /* QuantityButtonView.swift */,
+			);
+			name = Views;
+			path = Views/Views;
+			sourceTree = "<group>";
+		};
+		A1830B002B2E074500CC4D7F /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A1830B012B2E07AC00CC4D7F /* ViewModel */,
+				A186BA632B26055B00A8A40C /* GroceryItemView.swift */,
+				A186BA652B26100700A8A40C /* GroceryListView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A1830B012B2E07AC00CC4D7F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A1B29B992B2CF05900D87A7C /* GroceryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		A186BA492B26051300A8A40C = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				A186BA6B2B26731300A8A40C /* App */,
-				A186BA6C2B26732600A8A40C /* Views */,
 				A186BA6D2B26733300A8A40C /* Model */,
+				A1830AFF2B2E06B100CC4D7F /* Views */,
+				A1830B002B2E074500CC4D7F /* Screens */,
 				A186BA592B26051500A8A40C /* Assets.xcassets */,
 				A186BA5B2B26051500A8A40C /* Preview Content */,
 			);
@@ -80,16 +116,6 @@
 				A186BA552B26051400A8A40C /* GroceryAppApp.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		A186BA6C2B26732600A8A40C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				A186BA632B26055B00A8A40C /* GroceryItemView.swift */,
-				A186BA652B26100700A8A40C /* GroceryListView.swift */,
-				A186BA692B26248700A8A40C /* CartView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		A186BA6D2B26733300A8A40C /* Model */ = {
@@ -170,8 +196,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1830AFE2B2E011400CC4D7F /* CartButtonView.swift in Sources */,
+				A1830AFC2B2DF41300CC4D7F /* QuantityButtonView.swift in Sources */,
 				A186BA6A2B26248700A8A40C /* CartView.swift in Sources */,
 				A186BA642B26055B00A8A40C /* GroceryItemView.swift in Sources */,
+				A1B29B9A2B2CF05900D87A7C /* GroceryViewModel.swift in Sources */,
 				A186BA682B2619A800A8A40C /* GroceryModel.swift in Sources */,
 				A186BA562B26051400A8A40C /* GroceryAppApp.swift in Sources */,
 				A186BA662B26100700A8A40C /* GroceryListView.swift in Sources */,
